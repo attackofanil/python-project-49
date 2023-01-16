@@ -3,8 +3,13 @@ import random
 from brain_game.scripts.cli import welcome_user
 from brain_game.scripts.brain_games import main
 
+main()
+
+
 def even():
     index = 0
+    user_name = welcome_user()
+    print(f'Answer "yes" if the number is even, otherwise answer "no".')
     while index < 3:
         x = random.randint(1, 100)
         print('Question: ', x)
@@ -26,7 +31,4 @@ def even():
 
 
 if __name__ == '__main__':
-    main()
-    user_name = welcome_user()
-    print(f"Hello, {user_name}!")
     even()

@@ -4,8 +4,11 @@ from random import randint
 from brain_game.scripts.cli import welcome_user
 from brain_game.scripts.brain_games import main
 
+main()
+
 
 def calc():
+    user_name = welcome_user()
     print('What is the result of the expression?')
     index = 0
     while index < 3:
@@ -26,7 +29,6 @@ def calc():
         if answer == total:
             index += 1
             print(result)
-            return result
         elif answer != total:
             print(f"'{answer}' + is wrong answer ;(.\
  Correct answer was {total}. Let's try again, {user_name}!")
@@ -37,7 +39,4 @@ def calc():
 
 
 if __name__ == '__main__':
-    main()
-    user_name = welcome_user()
-    print(f"Hello, {user_name}!")
-    calc()
+        calc()

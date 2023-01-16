@@ -1,3 +1,5 @@
 .venv
+venv
 /dist/
-brain_game/scripts/__pycache__
+brain_game/scripts/__pycache__/
+brain_game/game/__pycache__/
