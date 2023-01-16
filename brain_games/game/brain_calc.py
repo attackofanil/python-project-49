@@ -1,10 +1,11 @@
 import prompt
 import random
 from random import randint
+from brain_games.scripts.cli import welcome_user
 
 
 def calc():
-    name = prompt.string('May I have your name? ')
+    name = welcome_user()
     print('Hello, ' + name + '!')
     print('What is the result of the expression?')
     index = 0
@@ -12,23 +13,27 @@ def calc():
         x = random.randint(50, 100)
         y = random.randint(1, 50)
         z = ['+', '-', '*']
-        end = z[randint(0, len(z)-1)]
+        end = z[randint(0, len(z) - 1)]
         print(f"Question: {x} {end} {y}")
         if end == '+':
-          total = x + y
+            total = x + y
         elif end == '-':
-          total = x - y
+            total = x - y
         elif end == '*':
-          total = x * y
+            total = x * y
         answer = int(input('Your answer: '))
         result = 'Correct!'
         if answer == total:
-          index += 1
-          print(result)
+            index += 1
+            print(result)
         elif answer != total:
-          print(f"'{answer}' + is wrong answer ;(.\
+            print(f"'{answer}' + is wrong answer ;(.\
  Correct answer was {total}. Let's try again, {name}!")
-          break
+            break
     if index == 3:
-       end = print(f"Congratulations, {name}!")
-       return end
+        end = print(f"Congratulations, {name}!")
+        return end
+
+
+if __name__ == '__main__':
+    calc()
