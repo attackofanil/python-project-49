@@ -23,5 +23,5 @@ prompt:
 	poetry add prompt
 
 lint:
-	poetry run flake8 brain_games
+	poetry run flake8 brain_game
 
