@@ -14,7 +14,7 @@ def progression():
         index_elem = sequence.index(elem)
         sequence.pop(index_elem)
         str(sequence.insert(index_elem, '..'))
-        print(" ".join(map(str, sequence)))
+        print('Question: ' + " ".join(map(str, sequence)))
         answer = prompt.string('Your answer: ')
         result = 'Correct!'
         if answer == str(elem):
