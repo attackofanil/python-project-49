@@ -2,9 +2,6 @@
 import random
 from random import randint
 from brain_game.scripts.cli import welcome_user
-from brain_game.scripts.brain_games import main
-
-main()
 
 
 def calc():
@@ -39,4 +36,4 @@ def calc():
 
 
 if __name__ == '__main__':
-        calc()
+    calc()

@@ -3,8 +3,6 @@ import random
 from brain_game.scripts.cli import welcome_user
 from brain_game.scripts.brain_games import main
 
-main()
-
 
 def even():
     index = 0
