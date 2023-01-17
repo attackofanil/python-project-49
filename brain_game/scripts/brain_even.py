@@ -5,7 +5,6 @@ from brain_game.game.even import even
 
 main()
 
-
 if __name__ == '__main__':
     main()
     even()

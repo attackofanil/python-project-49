@@ -15,6 +15,7 @@ brain-games = "brain_game.scripts.brain_games:main"
 brain-even = "brain_game.scripts.brain_even:even"
 brain-calc = "brain_game.scripts.brain_calc:calc"
 brain-gcd = "brain_game.scripts.brain_gcd:gcd"
+brain-progression = "brain_game.scripts.brain_progression:progression"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.0.0"
