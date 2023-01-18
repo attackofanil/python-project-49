@@ -10,5 +10,3 @@ def welcome_user():
 
 if __name__ == '__main__':
     name = welcome_user()
-
-

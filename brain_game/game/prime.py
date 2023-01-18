@@ -1,4 +1,4 @@
-import prompt
+
 import random
 import prompt
 from brain_game.scripts.cli import welcome_user

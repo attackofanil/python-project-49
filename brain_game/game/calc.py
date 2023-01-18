@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 import random
-from random import randint
-from brain_game.scripts.brain_games import greetings
 from brain_game.scripts.cli import welcome_user
 
 
@@ -12,22 +10,16 @@ def calc():
     while counter < 3:
         first_number = random.randint(50, 100)
         second_number = random.randint(1, 50)
-        expression = ['+', '-', '*']
-        end = expression[randint(0, len(expression) - 1)]
-        print(f"Question: {first_number} {end} {second_number}")
-        total = ''
-        if end == '+':
-            total = first_number + second_number
-        elif end == '-':
-            total = first_number - second_number
-        elif end == '*':
-            total = first_number * second_number
+        expression = random.choice([' + ', ' - ', ' * '])
+        question = str(first_number) + expression + str(second_number)
+        print(f"Question: {question}")
+        total = eval(question)
         answer = int(input('Your answer: '))
         result = 'Correct!'
         if answer == total:
             counter += 1
             print(result)
-        elif answer != total:
+        else:
             print(f"'{answer}' + is wrong answer ;(.\
  Correct answer was {total}. Let's try again, {name}!")
             break
