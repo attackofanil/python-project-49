@@ -14,8 +14,8 @@ def gcd():
         first_number = random.randint(1, 50)
         second_number = random.randint(1, 50)
         expression = math.gcd(first_number, second_number)
-        print('Question: ', first_number, second_number)
-        answer = input('Your answer: ')
+        print(f"Question: {first_number} {second_number}")
+        answer = prompt.string('Your answer: ')
         result = 'Correct!'
         if answer == result:
             counter += 1
