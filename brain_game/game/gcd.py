@@ -2,7 +2,6 @@
 import random
 import math
 import prompt
-from brain_game.scripts.brain_games import main
 from brain_game.scripts.cli import welcome_user
 
 
@@ -15,9 +14,9 @@ def gcd():
         second_number = random.randint(1, 50)
         expression = math.gcd(first_number, second_number)
         print(f"Question: {first_number} {second_number}")
-        answer = prompt.string('Your answer: ')
+        answer = int(prompt.string('Your answer: '))
         result = 'Correct!'
-        if answer == result:
+        if answer == expression:
             counter += 1
             print(result)
         elif answer != expression:
