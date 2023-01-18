@@ -10,8 +10,8 @@ def even():
     print(f'Answer "yes" if the number is even, otherwise answer "no".')
     while counter  < 3:
         number = random.randint(1, 100)
-        print('Question: ', number)
-        answer = input('Your answer: ')
+        print(f"Question: {number})
+        answer = prompt.string('Your answer: ')
         result = 'Correct!'
         if (number % 2 == 0 and answer == 'yes') or (number % 2 != 0 and answer == 'no'):
             counter  += 1
