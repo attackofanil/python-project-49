@@ -1,8 +1,14 @@
+#!/usr/bin/env python3
+import prompt
 
 
 def welcome_user():
-    return input('May I have your name? ')
+    name = prompt.string('May I have your name? ')
+    print(f"Hello, {name}!")
+    return name
 
 
 if __name__ == '__main__':
-    print(f"Hello, {welcome_user()}!")
+    name = welcome_user()
+
+

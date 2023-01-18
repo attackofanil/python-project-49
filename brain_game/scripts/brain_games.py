@@ -3,11 +3,15 @@
 from brain_game.scripts.cli import welcome_user
 
 
-def main():
+def greetings():
     print('Welcome to the Brain Games!')
 
 
+def main():
+    greetings()
+    name = welcome_user()
+
+
+
 if __name__ == '__main__':
-    main()
-    user_name = welcome_user()
-    print(f"Hello, {user_name}!")
+    greetings()

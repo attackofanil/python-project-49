@@ -1,11 +1,12 @@
 import prompt
 import random
+import prompt
 from brain_game.scripts.cli import welcome_user
 
 
 def prime():
+    name = welcome_user()
     index = 0
-    user_name = welcome_user()
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     while index < 3:
         x = random.randint(1, 100)
@@ -21,11 +22,11 @@ def prime():
             print(result)
         else:
             print(f"'{answer}' + is wrong answer ;(. "
-                  f"Correct answer was 'no'. Let's try again, {user_name}!")
+                  f"Correct answer was 'no'. Let's try again, {name}!")
             break
 
     if index == 3:
-        print(f"Congratulations, {user_name}!")
+        print(f"Congratulations, {name}!")
         return
 
 

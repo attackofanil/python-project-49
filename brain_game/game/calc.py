@@ -1,37 +1,38 @@
 #!/usr/bin/env python3
 import random
 from random import randint
+from brain_game.scripts.brain_games import greetings
 from brain_game.scripts.cli import welcome_user
 
 
 def calc():
-    user_name = welcome_user()
+    name = welcome_user()
     print('What is the result of the expression?')
-    index = 0
-    while index < 3:
-        x = random.randint(50, 100)
-        y = random.randint(1, 50)
-        z = ['+', '-', '*']
-        end = z[randint(0, len(z) - 1)]
-        print(f"Question: {x} {end} {y}")
+    counter = 0
+    while counter < 3:
+        first_number = random.randint(50, 100)
+        second_number = random.randint(1, 50)
+        expression = ['+', '-', '*']
+        end = expression[randint(0, len(expression) - 1)]
+        print(f"Question: {first_number} {end} {second_number}")
         total = ''
         if end == '+':
-            total = x + y
+            total = first_number + second_number
         elif end == '-':
-            total = x - y
+            total = first_number - second_number
         elif end == '*':
-            total = x * y
+            total = first_number * second_number
         answer = int(input('Your answer: '))
         result = 'Correct!'
         if answer == total:
-            index += 1
+            counter += 1
             print(result)
         elif answer != total:
             print(f"'{answer}' + is wrong answer ;(.\
- Correct answer was {total}. Let's try again, {user_name}!")
+ Correct answer was {total}. Let's try again, {name}!")
             break
-    if index == 3:
-        end = print(f"Congratulations, {user_name}!")
+    if counter == 3:
+        end = print(f"Congratulations, {name}!")
         return end
 
 

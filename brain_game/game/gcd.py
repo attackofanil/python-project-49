@@ -1,29 +1,31 @@
 #!/usr/bin/env python3
 import random
 import math
+import prompt
+from brain_game.scripts.brain_games import main
 from brain_game.scripts.cli import welcome_user
 
 
 def gcd():
-    user_name = welcome_user()
+    name = welcome_user()
     print('Find the greatest common divisor of given numbers.')
-    index = 0
-    while index < 3:
-        x = random.randint(1, 50)
-        y = random.randint(1, 50)
-        z = math.gcd(x, y)
-        print('Question: ', x, y)
+    counter = 0
+    while counter < 3:
+        first_number = random.randint(1, 50)
+        second_number = random.randint(1, 50)
+        expression = math.gcd(first_number, second_number)
+        print('Question: ', first_number, second_number)
         answer = input('Your answer: ')
         result = 'Correct!'
         if answer == result:
-            index += 1
+            counter += 1
             print(result)
-        elif answer != z:
+        elif answer != expression:
             print(f"'{answer}' + is wrong answer ;(. "
-                  f"Correct answer was {z}. Let's try again, {user_name}!")
+                  f"Correct answer was {expression}. Let's try again, {name}!")
             break
-    if index == 3:
-        end = print(f"Congratulations, {user_name}!")
+    if counter == 3:
+        end = print(f"Congratulations, {name}!")
         return end
 
 
